@@ -2,6 +2,7 @@
   "name": "hash-history-basketball-league-v5",
   "version": "1.0.0",
   "dependencies": {
+    "query-string": "^6.12.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0",
