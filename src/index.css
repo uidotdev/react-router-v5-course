@@ -1,13 +1,285 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://ui.dev/font");
+
+:root {
+  --black: #000;
+  --white: #fff;
+  --red: #f32827;
+  --purple: #a42ce9;
+  --blue: #2d7fea;
+  --yellow: #f4f73e;
+  --pink: #eb30c1;
+  --gold: #ffd500;
+  --aqua: #2febd2;
+  --gray: #282c35;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html {
+  font-family: proxima-nova, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  font-size: 18px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background: var(--black);
+  color: var(--white);
+}
+
+a {
+  color: var(--gold);
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+.border-container {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.border-item {
+  width: 20vw;
+  height: 12px;
+}
+
+.container {
+  position: relative;
+  max-width: 1000px;
+  min-width: 280px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.large-header {
+  font-size: 105px;
+  text-align: center;
+  font-weight: 900;
+}
+
+.medium-header {
+  font-size: 55px;
+  text-align: center;
+  margin: 20px 0;
+  font-weight: 900;
+}
+
+.header {
+  margin: 20px 0;
+  font-weight: 300;
+  font-size: 35px;
+  font-weight: 900;
+}
+
+.center {
+  display: block;
+  margin: 0 auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.row {
+  display: flex;
+  justify-content: space-around;
+}
+
+.home-grid {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.navbar {
+  font-size: 16px;
+  text-transform: uppercase;
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+}
+
+.nav-links a {
+  padding: 0 10px;
+}
+
+.two-column {
+  display: flex;
+}
+
+.panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.avatar {
+  width: 200px;
+  border-radius: 100px;
+}
+
+.info-list {
+  margin-bottom: 30px;
+  padding: 0;
+}
+
+.info-list li {
+  font-size: 33px;
+  margin: 20px 0;
+  font-weight: 700;
+}
+
+.info-list div {
+  font-size: 24px;
+  font-weight: 300;
+}
+
+.sidebar-list {
+  display: flex;
+  padding: 10px;
+  flex-direction: column;
+  padding: 0;
+}
+
+.sidebar-list a {
+  line-height: 25px;
+}
+
+.sidebar-instruction {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  font-weight: 900;
+  font-size: 22px;
+}
+
+.articles {
+  margin: 0;
+  padding: 0;
+}
+
+.articles li {
+  font-size: 28px;
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+
+.article {
+  margin: 20px;
+  padding: 20px;
+}
+
+.article p {
+  line-height: 35px;
+  font-size: 20px;
+}
+
+.article-title {
+  margin: 0;
+  font-weight: 300;
+}
+
+.article-date {
+  font-size: 14px;
+  padding: 0;
+}
+
+.btn-main {
+  max-width: 240px;
+  min-width: 150px;
+  padding: 10px;
+  border: 2px solid black;
+  color: var(--white);
+  text-align: center;
+  background: var(--pink);
+  font-weight: 900;
+  font-size: 15px;
+}
+
+.btn-main:hover {
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.championships {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.championships li {
+  margin: 0 10px;
+}
+
+@media (max-width: 680px) {
+  .container {
+    padding: 8px;
+  }
+
+  .large-header {
+    font-size: 60px;
+  }
+
+  .medium-header {
+    font-size: 40px;
+  }
+
+  .header {
+    font-size: 25px;
+    margin: 10px 0;
+  }
+
+  .avatar {
+    width: 125px;
+    border-radius: 62.5px;
+  }
+
+  .home-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .info-list li {
+    font-size: 20px;
+  }
+
+  .info-list div {
+    font-size: 16px;
+  }
+  .championships li {
+    font-size: 12px;
+  }
+
+  .sidebar-list {
+    font-size: 12px;
+  }
+
+  .article {
+    padding: 5px;
+    margin: 5px;
+  }
+
+  .article-title {
+    font-size: 16px;
+  }
 }
