@@ -9,6 +9,7 @@ import Players from './Players'
 import Teams from './Teams'
 import Navbar from './Navbar'
 import TeamPage from './TeamPage'
+import Articles from './Articles'
 
 export default function App () {
   return (
@@ -28,6 +29,9 @@ export default function App () {
           </Route>
           <Route path='/:teamId' exact>
             <TeamPage />
+          </Route>
+          <Route path='/:teamId/articles'>
+            <Articles />
           </Route>
           <Route path='*'>
             <h1 className='text-center'>Four oh Four</h1>
