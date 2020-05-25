@@ -3,6 +3,7 @@ import { useParams, Switch, Route, useRouteMatch } from 'react-router-dom'
 import useTeamsArticles from '../hooks/useTeamsArticles'
 import Sidebar from './Sidebar'
 import useArticle from '../hooks/useArticle'
+import Loading from './Loading'
 
 function Article () {
   const { teamId, articleId } = useParams()
@@ -34,7 +35,7 @@ export default function Articles () {
   } = useTeamsArticles(teamId)
 
   if (loading === true) {
-    return <p>LOADING</p>
+    return <Loading />
   }
 
   return (
